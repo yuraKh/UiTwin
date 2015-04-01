@@ -8,11 +8,11 @@ public class Grid : MonoBehaviour {
 	int xP = 0;
 	int yP = 0;
 	int zP = 0;
-	static public GameObject [,] cub = new GameObject[5,5];
+	static public GameObject [,,] cub = new GameObject[3,3,3];
 	// Use this for initialization
 	void Start () {
 
-	/*for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 3; i++) {
 			yP = 0;
 			for (int q = 0; q < 3; q++) {
 				zP = 0;
@@ -26,21 +26,22 @@ public class Grid : MonoBehaviour {
 				yP++;
 			}
 			xP++;
-		}*/
+		}
 
-			for (int q = 0; q < 5; q++) {
+			/*for (int q = 0; q < 5; q++) {
 				zP = 0;
 				for (int j = 0; j < 5; j++) {
 				k = Random.Range(0, 3);
 					GameObject Cub = (GameObject)Instantiate(Cube);
 					Cub.transform.position = new Vector3(Cub.transform.position.x + zP, Cub.transform.position.y + yP, Cub.transform.position.z);
 					Cub.GetComponent<MeshRenderer>().material.color = Col[k];
+                    Cub.transform.name = "square" + string.Format("{0:D2}", q) + " " + string.Format("{0:D2}", j);
 					cub [q, j] = Cub;
 					zP++;
 				}
 				yP++;
 
-		}
+		}*/
 
 	}
 	
